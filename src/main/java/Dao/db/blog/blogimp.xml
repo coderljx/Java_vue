@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--  由于该文件是跟接口做映射， 所以这里写接口的地址 -->
+<mapper namespace="Dao.db.blog.blog">
+    <select id="Select" resultType="JavaBean.blogs">
+         select * from blog
+    </select>
+
+</mapper> 

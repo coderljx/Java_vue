@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="now.uuserdao">
+    <select id="selectuser" resultType="domain.Uuser" >
+         SELECT * FROM user where  id = #{id}
+    </select>
+
+    <select id="selectAll" resultType="domain.Uuser" >
+        select * from  user
+    </select>
+
+    <delete id="DeleteUser">
+        delete  from  user  where  username = #{name} and  id = #{id}
+    </delete>
+
+    <select id="GetPage"  resultType="domain.Uuser">
+         select  * from user limit #{page},#{page2}
+    </select>
+
+</mapper>
